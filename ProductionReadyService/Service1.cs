@@ -44,7 +44,15 @@ namespace ProductionReadyService
                     {
                         if (Days.Contains(((int)DateTime.Now.DayOfWeek).ToString()))
                         {
-                            DisableUpdateSvc();
+                            try
+                            {
+                                DisableUpdateSvc();
+                            }
+                            catch
+                            {
+
+                            }
+                            
                         }
                         else
                         {
